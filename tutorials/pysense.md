@@ -93,8 +93,10 @@ It's that easy!
 
 ## Exercises
 
-1. Change the color of the LED based on accelerometer measurements (green, orange, red).
-2. Log the measurements of temperature every 10 seconds into the `/flash/log` folder (while LED blinking green) and the measurements of huidity every 30 seconds.
+1. Change the color of the LED based on accelerometer measurements (green, orange, red if the values of acceleration are small, medium or large)
+2. Find where is the temperature sensor and where is the light sensor
+3. Log the measurements of temperature every 10 seconds and the measurements of humidity every 30 seconds into the /flash/log folder (while LED blinking green)
+4. Build a pendulum, measure its acceleration and visualize the result. See https://en.wikipedia.org/wiki/Pendulum 
 
 ## Advanced
 
