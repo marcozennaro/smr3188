@@ -1,5 +1,3 @@
-> [Internet of Things (IoT) | Training Course](pysense.md) ▸ **Pysense**
-
 # Pysense: Measuring acceleration, temperature, ...
 
 ## Introduction

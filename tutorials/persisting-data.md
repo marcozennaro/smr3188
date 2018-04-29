@@ -1,5 +1,3 @@
-> [Internet of Things (IoT) | Training Course](persisting-data.md) ▸ **Persisiting data**
-
 # Persisting data: writing data on `/flash` or `/SD` card
 
 ## Introduction

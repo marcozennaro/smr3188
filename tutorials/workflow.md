@@ -1,5 +1,3 @@
-> [Internet of Things (IoT) | Training Course](workflow.md) ▸ **Workflow**
-
 # Workflow
 
 [1. Pycom typical workflow](#pycom-typical-workflow)

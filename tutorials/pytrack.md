@@ -1,5 +1,3 @@
-> [Internet of Things (IoT) | Training Course](pytrack.md) ▸ **Pytrack**
-
 # Pytrack: your exact position in the world
 
 ## Introduction

@@ -1,5 +1,3 @@
-> [Internet of Things (IoT) | Training Course](WiFi.html) ▸ **WiFi**
-
 # WiFi: connecting to a WiFi network
 
 ## Introduction
