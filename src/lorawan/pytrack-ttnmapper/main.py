@@ -5,12 +5,12 @@
 #
 # About loramac, see:
 #
-https://docs.pycom.io/pycom_esp32/pycom_esp32/tutorial/includes/lora-mac.html
+#https://docs.pycom.io/pycom_esp32/pycom_esp32/tutorial/includes/lora-mac.html
 #
-https://forum.pycom.io/topic/934/lora-stats-documentation-is-missing-the-parameter-must-passed/2
+#https://forum.pycom.io/topic/934/lora-stats-documentation-is-missing-the-parameter-must-passed/2
 # https://github.com/puthli/meet-de-klas
 #
-https://forum.pycom.io/topic/1648/how-to-recognize-awakening-from-pysense-go-to-sleep/4
+#https://forum.pycom.io/topic/1648/how-to-recognize-awakening-from-pysense-go-to-sleep/4
 # machine.reset_cause() restituisce sempre un codice errato !!!!
 # 05/10
 # inserito watchdog
@@ -134,14 +134,14 @@ lora_mac = connection.getLoraMac()
 lora_id = lora_mac[-6:]                     # only last 6 chars
 
 ledcolor = 'red'                            # first start with color red
-(no gps position)
+# no gps position)
 
 while True:
    # -----------------------------
    gc.collect()
 
    wdt.feed()                                              # Feed the
-WDT to prevent it from resetting the system
+#WDT to prevent it from resetting the system
 
    # --------------- start of code executed after awakening
    # led.setLED('green')
@@ -153,10 +153,12 @@ WDT to prevent it from resetting the system
    # ----------------------------
    gc.collect()
    wdt.feed()                                  # Feed the WDT to
-prevent it from resetting the system
+# prevent it from resetting the system
 
    acc = li.acceleration()                     # read accelerometer
-parameters
+#parameters
+
+   acc = li.acceleration()                     # read accelerometer parameters
    rol = li.roll()
    pit = li.pitch()
    # yaw = li.yaw()                            # 19/03: not used
@@ -164,7 +166,7 @@ parameters
    # ----------------------------
    gc.collect()
    wdt.feed()                                  # Feed the WDT to
-prevent it from resetting the system
+#prevent it from resetting the system
 
    coord = l76.coordinates()                   # get gps coordinates
    # lat = str(coord[0])
@@ -206,13 +208,13 @@ position)
 
    gc.collect()
    wdt.feed()                                  # Feed the WDT to
-prevent it from resetting the system
+# prevent it from resetting the system
 
    # ----------------------------
    # creating Cayenne LPP packet with gps position
    gc.collect()
    wdt.feed()                                  # Feed the WDT to
-prevent it from resetting the system
+# prevent it from resetting the system
 
    ## fLat = 45.7038           ## dbg
    if fLat is not None:
@@ -239,16 +241,16 @@ prevent it from resetting the system
    # ----------------------------
    # form the message to save on csv
    # see:
-https://stackoverflow.com/questions/8885663/how-to-format-a-floating-number-to-fixed-width-in-python
+# https://stackoverflow.com/questions/8885663/how-to-format-a-floating-number-to-fixed-width-in-python
    # https://docs.python.org/3/library/string.html#formatstrings
    # ex: {: 5d} print 5 digits fill with space
    # msgSd = str(count_tx) + ',' + lora_mac + ',' + streset + ',' +
-cause + ',' + str(coord)
+#cause + ',' + str(coord)
    # ok
    # msgSd = str(count_tx) + ',' + lora_id + ',' + str(coord)
    # note:
    # 5 char of index, for 5 seconds, the max index value is 99999. It
-restart after 5 days
+#restart after 5 days
    # msgSd = "{: 5d},{},({: >8},{: >8})".format(
    msgSd = "{:5d},{},({: >8},{: >8})".format(
            count_tx,
@@ -259,8 +261,7 @@ restart after 5 days
    # print(msgSd)
 
    # update message to save in sd
-   msgSd = msgSd + ",{: >10.5f},{: >10.5f}".format(rol,
-pit).encode('utf-8')
+   msgSd = msgSd + ",{: >10.5f},{: >10.5f}".format(rol,pit).encode('utf-8')
 
    # connection.lora.nvram_save()
    print('{}[{}]{}'.format(lora_id, msgSd, len(msgSd)))
@@ -271,12 +272,12 @@ pit).encode('utf-8')
    # pycom.nvs_set('count_tx', count_tx)       # save count_tx
    gc.collect()
    wdt.feed()                                  # Feed the WDT to
-prevent it from resetting the system
+# prevent it from resetting the system
 
    #----------------------------------------------
    # write on file
    # see:
-https://stackoverflow.com/questions/5214578/python-print-string-to-text-file
+# https://stackoverflow.com/questions/5214578/python-print-string-to-text-file
    # msgSd.decode("utf-8") delete b'' chars
    # f = open('/sd/loggps.csv', 'a+')
    #with open('/sd/loggps.csv', 'a+') as text_file:
