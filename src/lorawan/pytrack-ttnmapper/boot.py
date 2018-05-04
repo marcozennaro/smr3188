@@ -1,0 +1,1 @@
+# boot.py -- run on boot-upimport osfrom machine import UARTimport pycompycom.heartbeat(False)# Setting up the UART to dump the output to the consoleuart = UART(0, 115200)os.dupterm(uart)
