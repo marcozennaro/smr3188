@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : PCB Document [GroveAdapter.PcbDoc]
+   Generated File[GroveAdapter.TXT]
+   Generated File[GroveAdapter.LDP]
+   Generated File[GroveAdapter.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 3:22:08 PM On 5/3/2018
