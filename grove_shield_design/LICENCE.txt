@@ -1,1 +1,1 @@
-This hardware is released under the Creative Commons Attribution-ShareAlike licence. (CC BY-SA)
+This work is licensed under a Creative Commons Attribution-ShareAlike License (CC BY-SA). It is attributed to NSIL-IAEA and MarconiLab-ICTP and the original version can be found here: https://github.com/marcozennaro/smr3188/tree/master/grove_shield_design
